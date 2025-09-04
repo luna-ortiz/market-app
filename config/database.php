@@ -20,7 +20,7 @@
  
     //comprobar conecccion
     if(!$conn){
-        echo "Error";
+        echo "Error: " . pg_last_error(); //para que muestre el ultimo error
     }else{
         echo "Connetion successfuly :::";
     }
