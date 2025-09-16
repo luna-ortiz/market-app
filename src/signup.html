@@ -1,32 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Market -  Register</title>
-    <link rel ="icon" type = "image/png" href = "icons/carro_market.png">
-</head>
-<body>
-    <center><h1>Register</h1></center>
-    <table border ="0" align ="center">
-        <tr><td><label>Firstname:</label></td></tr>
-        <tr><td><input type="text" placeholder="Nombre"><br></td></tr>
-        <tr><td><label>Lastname:</label></td></tr>
-        <tr><td><input type = "text"><br></td></tr>
-        <tr><td><label> Mobile numbre:</label></td></tr>
-        <tr><td><input type = "text"><br></td></tr>
-        <tr><td><label> Identification number:</label></td></tr>
-        <tr><td><input type = "text"><br></td></tr>
-        <tr><td><label> Email:</label></td></tr>
-        <tr><td><input type = "email"><br></td></tr>
-        <tr><td><label> Password:</label></td></tr>
-        <tr><td><input type = "password"><br><br></td></tr>
-        <tr><td><button>Register</button></td></tr>
-        
-    </table>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Market -  Register</title>
+        <link rel ="icon" type = "image/png" href = "icons/carro_market.png">
+    </head>
+    <body> 
+        <center><h1>Register</h1></center>
+        <form name = "register-from" action = "signup.php" method="post">
+            <table border ="0" align ="center">
+                <tr><td><label>Firstname:</label></td></tr>
+                <tr><td><input type="text" name = "Fname" placeholder="Nombre" required></td>
+                <tr><td><label>Lastname:</label></td>
+                <tr><td><input type = "text" name = "lname" required></td>
+                <tr><td><label> Mobile numbre:</label></td>
+                <tr><td><input type = "text" name = "mnumber" required></td>
+                <tr><td><label> Identification number:</label></td>
+                <tr><td><input type = "text" name = "idnumber" required></td>
+                <tr><td><label> Email:</label></td>
+                <tr><td><input type = "email" name = "email" required></td>
+                <tr><td><label> Password:</label></td>
+                <tr><td><input type = "password" name = "passwd" required></td>
+                <tr><td align= "center"><button>Register</button></td>
+            </table>
+        </form>
+    
+        <!--<input type = "submit" value = "Register"><br>-->
 
-   
-    <!--<input type = "submit" value = "Register"><br>-->
-
-</body>
+    </body>
 </html>
