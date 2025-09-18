@@ -25,6 +25,6 @@ VALUES(
 	'Luna',
 	'Ortiz',
 	'37632184',
-	'dhsj@d',
+	'luna@gmail.com',
 	'13232'
 );
