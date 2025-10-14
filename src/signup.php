@@ -36,7 +36,7 @@
             INSERT INTO users (
                 firstname,
                 lastname,
-                mobile_numbre,
+                mobile_number,
                 ide_number,
                 email,
                 password
@@ -51,7 +51,7 @@
         ";
 
         //Step 4  execute query
-        $res= pg_query($conn,$query);
+        $res= pg_query($conn_supa,$query);
 
         //Step 5: validate result
         if($res){

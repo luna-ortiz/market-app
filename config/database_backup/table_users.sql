@@ -2,7 +2,7 @@ CREATE TABLE users(
 	id BIGSERIAL PRIMARY KEY,
 	firstname varchar(30) NOT NULL,
 	lastname VARCHAR(30) NOT NULL,
-	mobile_numbre VARCHAR(20) NOT NULL,
+	mobile_number VARCHAR(20) NOT NULL,
 	ide_number VARCHAR(15) NULL UNIQUE,
 	adress TEXT NULL,
 	birthday DATE NULL,
@@ -17,7 +17,7 @@ CREATE TABLE users(
 INSERT INTO users(
 	firstname,
 	lastname,
-	mobile_numbre,
+	mobile_number,
 	email,
 	password
  )
