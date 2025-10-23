@@ -31,15 +31,23 @@
     ";
 
     //conexion
-    $conn_supa = pg_connect($supa_data_connection);
+    //$conn_supa = pg_connect($supa_data_connection);
     $conn_local = pg_connect($local_data_connection);
 
  
     //comprobar conexion
+    if(!$conn_local){
+        echo "Error: " . pg_last_error(); //para que muestre el ultimo error
+    }else{
+       echo "Connetion successfully !!!";
+    }
+
+    /*
     if(!$conn_supa){
         echo "Error: " . pg_last_error(); //para que muestre el ultimo error
     }else{
         echo "Connetion successfully !!!";
     }
+        */
 
 ?>
