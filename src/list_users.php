@@ -9,9 +9,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Marketapp - List users</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>  
 </head>
 <body>
-    <table border = "1">
+    <table align ="center" class="table table-dark table-striped">
         <tr>
             <th>Fullname</th>
             <th>E-mail</th>
@@ -23,7 +25,8 @@
         <?php
             $sql_users = "
                 select 
-                    u.firstname || '' || u.lastname as fullname,
+                    u.id as user_id,
+                    u.firstname || ' ' || u.lastname as fullname,
                     u.email,
                     u.ide_number,
                     u.mobile_number,
@@ -45,13 +48,14 @@
                     <tr>
                         <td>" . $row['fullname'] . "</td>
                         <td>" . $row['email'] . "</td>
-                        <td>1101</td>
-                        <td>312212123</td>
-                        <td>Active</td>
+                        <td>" . $row['ide_number'] . "</td>
+                        <td>" . $row['mobile_number'] . "</td>
+                        <td>" . $row['status'] . "</td>
                         <td>
-                            <a href = '#' ><img src = 'icons/search-icon(1).png' width = '20'></a>
-                            <a href = '#' ><img src = 'icons/search-icon(1).png' width = '20'></a>
-                            <a href = '#' ><img src = 'icons/search-icon(1).png' width = '20'></a>
+                            <a href = '#' ><img src = 'icons/search.png' width = '20'></a>
+                            <a href = '#' ><img src = 'icons/lapiz.png' width = '20'></a>
+                            <a href = 'delete_user.php?userId=". $row['user_id']."' >
+                            <img src = 'icons/borrar.png' width = '20'></a>
                         </td>
                     </tr>
                 ";
