@@ -29,7 +29,7 @@
 </head>
 <body>
     <center>
-    <form name ="edit-user-form" action ="update_user.php" method ="post"
+    <form name ="edit-user-form" action ="update_user.php" method ="post">
 
         <input 
             type="hidden" 

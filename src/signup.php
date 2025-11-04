@@ -25,7 +25,7 @@
             email = '$e_mail' or  ide_number = '$id_number'
         LIMIT 1
     ";
-    $res_check= pg_query($conn_supa,$check_email);
+    $res_check= pg_query($conn_local,$check_email);
 
     if(pg_num_rows($res_check) > 0){
          echo "<script>alert('User already exists !!!')</script>";+
@@ -51,7 +51,7 @@
         ";
 
         //Step 4  execute query
-        $res= pg_query($conn_supa,$query);
+        $res= pg_query($conn_local,$query);
 
         //Step 5: validate result
         if($res){
