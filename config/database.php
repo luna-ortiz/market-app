@@ -39,7 +39,7 @@
     if(!$conn_local){
         echo "Error: " . pg_last_error(); //para que muestre el ultimo error
     }else{
-       echo "Connetion successfully !!!";
+       echo "Connection successfully !!!";
     }
 
     /*

@@ -42,6 +42,7 @@
 
     if(pg_num_rows($res_check) > 0){
         //echo "User exists. Go to main page !!!";
+        echo "<script>alert('Starting Session')</script>";
         header('refresh:0;url=main.php');
 
     } else {
